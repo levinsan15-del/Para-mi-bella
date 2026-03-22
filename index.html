@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Para Martha ❤️</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: #333;
-            padding-top: 100px;
-        }
-        h1 {
-            font-size: 50px;
-            color: #fff;
-        }
-        p {
-            font-size: 25px;
-        }
-        .card {
-            background: white;
-            margin: auto;
-            padding: 30px;
-            border-radius: 20px;
-            width: 60%;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Para Martha 💛</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* VIDEO DE FONDO */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* TARJETA */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.85);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+p {
+    font-size: 22px;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Para Martha ❤️</h1>
-        <p>Hola Martha,</p>
-        <p>Hice esto especialmente para ti 💖</p>
-        <p>Eres una persona muy importante para mí y quería que tuvieras algo único.</p>
-        <p>Te quiero mucho 🌸</p>
-    </div>
+<video autoplay muted loop>
+    <source src="flores.mp4" type="video/mp4">
+</video>
+
+<div class="card">
+    <h1>Para Martha 💛</h1>
+    <p>Estas flores amarillas son para ti 🌻</p>
+    <p>Porque iluminas mi vida como nadie más 💖</p>
+    <p>Te quiero muchísimo 💛</p>
+</div>
 
 </body>
 </html>
