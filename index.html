@@ -11,7 +11,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* VIDEO DE FONDO */
+/* VIDEO */
 video {
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@ video {
     z-index: -1;
 }
 
-/* TARJETA */
+/* CONTENIDO */
 .card {
     position: absolute;
     top: 50%;
@@ -32,14 +32,34 @@ video {
     padding: 30px;
     border-radius: 20px;
     text-align: center;
+    width: 300px;
 }
 
+/* TEXTO */
 h1 {
-    font-size: 45px;
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 
-p {
-    font-size: 22px;
+#mensaje {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* BOTÓN */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e63950;
 }
 </style>
 </head>
@@ -52,10 +72,30 @@ p {
 
 <div class="card">
     <h1>Para Martha 💛</h1>
-    <p>Estas flores amarillas son para ti 🌻</p>
-    <p>Porque iluminas mi vida como nadie más 💖</p>
-    <p>Te quiero muchísimo 💛</p>
+    <p id="mensaje">Haz clic abajo ❤️</p>
+    <button onclick="cambiarMensaje()">Presióname 💕</button>
 </div>
+
+<script>
+let mensajes = [
+    "Estas flores amarillas son para ti 🌻",
+    "Porque iluminas mi vida 💛",
+    "Eres lo mejor que me ha pasado 💖",
+    "Me haces muy feliz 😊",
+    "Te quiero muchísimo Martha 💕",
+    "Nunca olvides lo especial que eres ✨"
+];
+
+let i = 0;
+
+function cambiarMensaje() {
+    document.getElementById("mensaje").innerText = mensajes[i];
+    i++;
+    if (i >= mensajes.length) {
+        i = 0;
+    }
+}
+</script>
 
 </body>
 </html>
